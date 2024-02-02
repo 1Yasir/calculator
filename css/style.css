@@ -34,6 +34,9 @@ button:hover {
 .center{
     text-align: center;
 }
-.hide{
-    display: none;
+.result-show-container{
+    overflow: hidden;
+    height: 0;
+    transition: all .3s ease-in-out;
 }
+

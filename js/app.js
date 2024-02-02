@@ -1,6 +1,7 @@
 let isfalse = false;
 // show result on click button 
 let btnClick = document.getElementById("buttonResult");
+let result_show_container = document.querySelector(".result-show-container")
 // input use for get users Value 
 let num1 = document.getElementById("num1");
 let num2 = document.getElementById("num2");
@@ -8,8 +9,15 @@ let num2 = document.getElementById("num2");
 // show the (hide/show) button on click  and remove and eventlistener base on condition input 
 
 function isHide(e){
+
+    if(result_show_container.clientHeight){
+        result_show_container.style.height = "0px";
+        
+    }else{
+        result_show_container.style.height = result_show_container.scrollHeight + "px";
+
+    }
     e.preventDefault()
-    btnClick.classList.toggle("hide");
     isfalse = !isfalse;
     if(isfalse){
         num1.removeEventListener("input", resultShow);   
