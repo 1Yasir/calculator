@@ -34,3 +34,6 @@ button:hover {
 .center{
     text-align: center;
 }
+.hide{
+    display: none;
+}
