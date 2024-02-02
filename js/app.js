@@ -5,6 +5,7 @@ let result_show_container = document.querySelector(".result-show-container")
 // input use for get users Value 
 let num1 = document.getElementById("num1");
 let num2 = document.getElementById("num2");
+let  operators = document.getElementById("operator");
 
 // show the (hide/show) button on click  and remove and eventlistener base on condition input 
 
@@ -33,6 +34,7 @@ function isHide(e){
 // add result function add input and button 
 num1.addEventListener("input", resultShow)
 num2.addEventListener("input", resultShow)
+operators.addEventListener("input", resultShow)
 btnClick.addEventListener("click" , resultShow)
 
 
@@ -42,7 +44,7 @@ btnClick.addEventListener("click" , resultShow)
 function resultShow() {
     let user1 = Number(num1.value.trim());
     let user2 = Number(num2.value.trim());
-    let operator = document.getElementById("option").value;
+    let operator = operators.value;
     calculator(operator, user1, user2);
 }
 
