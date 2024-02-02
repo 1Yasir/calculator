@@ -50,6 +50,7 @@ function resultShow() {
 function calculator(operator = "+", a = 0, b = 0) {
     // select the result element 
     const result = document.getElementById("result");
+    result.style.color = "";
     switch (operator) {
         case "+":
             result.innerHTML = (a + b);
